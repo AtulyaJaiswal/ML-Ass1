@@ -9,6 +9,17 @@ This assignment consists of three parts:
 
 ## Part 1: Modifying an Existing Web Server Container
 
+# ELL887 Cloud Computing - Assignment 1 (Containers)
+
+## Overview
+This assignment consists of three parts:
+1. *Modifying an existing web server container* (Nginx)
+2. *Creating and pushing a container* (C++ program + MySQL database)
+3. *Deploying a web server in Kubernetes*
+---
+
+## Part 1: Modifying an Existing Web Server Container
+
 ### Objective
 This part modifies an Nginx container to serve a custom webpage at http://localhost/ELL887.
 
