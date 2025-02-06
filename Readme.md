@@ -36,7 +36,7 @@ This part modifies an Nginx container to serve a custom webpage at http://localh
 4. *Verify the output:*
     [htttp://localhost/ELL887](http://localhost/ELL887)
 
-   OUTPUT: "Hello world! I am Atulya Jaiswal".
+   OUTPUT: "Hello World! I am Atulya Jaiswal".
    ![Screenshot (6)](https://github.com/user-attachments/assets/ec9a1e39-0fc8-4514-8793-6314c8e9e86a)
 
    
@@ -72,11 +72,14 @@ B. *Start the Database using Docker Compose*
      #password: tutumeranaam
 
 3. *Repositories pull command*
-    docker pull atulyajaiswal/ell887:app 
+   
+    docker pull atulyajaiswal/ell887:app
+
+   
     docker pull atulyajaiswal/ell887:db 
 
 
-For connecting the cpp and MySQL, I have used the left side docker-compose file and submitted the (right side image_ docker-compose file in which I have updated the image as docker repositories.
+For connecting the cpp and MySQL, I have used the top docker-compose file and submitted the (bottom image_ docker-compose file in which I have updated the image as docker repositories.
 
 ![Screenshot (4)](https://github.com/user-attachments/assets/d35dd816-c003-46d9-8093-76493e85b2d9)
 ![Screenshot (7)](https://github.com/user-attachments/assets/9dfb1406-dfb2-426b-9d8b-7c61b2c49375)
@@ -89,7 +92,7 @@ For connecting the cpp and MySQL, I have used the left side docker-compose file 
 ## Part 3: Modifying an Existing Web Server Container
 
 ### Objective
-Deploy a web server in a Kubernetes cluster using Minikube. web server runs on port 30001
+Deploy a web server in a Kubernetes cluster using Minikube. web server runs on port 30081
 
 ### Files Provided:
 - deployment.yaml (K8s Deployment & service for the web server)
@@ -102,6 +105,7 @@ Deploy a web server in a Kubernetes cluster using Minikube. web server runs on p
    kubectl get pods
    
 3. *check the service pods using (wait until webserver pod is in running state the use below cmd):*
+   
    minikube service webserver-service
 
 ![Screenshot (8)](https://github.com/user-attachments/assets/87a88af0-c196-4aad-afd4-d33d25d9f8fa)
