@@ -7,8 +7,6 @@ This assignment consists of three parts:
 3. *Deploying a web server in Kubernetes*
 ---
 
-## Part 1: Modifying an Existing Web Server Container
-
 # ELL887 Cloud Computing - Assignment 1 (Containers)
 
 ## Overview
