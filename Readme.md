@@ -27,16 +27,13 @@ This part modifies an Nginx container to serve a custom webpage at http://localh
 
 ### Steps to Run:
 1. *Build the container:*
-   sh
    docker build -t part1 .
 
 2. **Run the container:**
-   sh
    docker run -d -p 80:80 part1
-   (![Screenshot (5)](https://github.com/user-attachments/assets/fdab5a8f-dd42-4414-b3a1-98c4db641787)
+   ![Screenshot (5)](https://github.com/user-attachments/assets/fdab5a8f-dd42-4414-b3a1-98c4db641787)
 
 4. *Verify the output:*
-   sh
     [htttp://localhost/ELL887](http://localhost/ELL887)
 
    OUTPUT: "Hello world! I am Atulya Jaiswal".
@@ -56,32 +53,25 @@ This part containerizes a C++ program that prints "Hello world!! I am Atulya Jai
 ### Steps to Run:
 A. **Run the c++ program container**
 1. **Build the C++ container:**
-   sh
    docker build -t part2 .
 
 2. *Run the container:*
-   sh
    docker run part2
 
 3. **Verify the output:**
-   sh
    OUTPUT: "Hello world!! I am Atulya Jaiswal from karakoram Hostel (2024EET2380)".
 ![Screenshot (3)](https://github.com/user-attachments/assets/6e7b9bb5-0c43-492a-b6b7-893af19c0d55)
 
 
 B. *Start the Database using Docker Compose*
 1. *Run the services(c++ ap + MySql database)*
-   
-   sh
     docker-compose up
 
 2. **Use different terminal to use MySql**
-   sh
      docker exec -it mysql-db mysql -u root -p
-     #password: admin@1
+     #password: tutumeranaam
 
 3. *Repositories pull command*
-   sh
     docker pull atulyajaiswal/ell887:app 
     docker pull atulyajaiswal/ell887:db 
 
@@ -93,7 +83,6 @@ For connecting the cpp and MySQL, I have used the left side docker-compose file 
 
 
 4. **To verify the output**
-   sh
    docker compose up
 
 
@@ -107,22 +96,18 @@ Deploy a web server in a Kubernetes cluster using Minikube. web server runs on p
 
 ### Steps to Run:
 1. *Apply the Kubernetes configuration using:*
-   sh
    kubectl apply -f deployment.yaml
 
 2. **check the running pods using:**
-   sh
    kubectl get pods
    
 3. *check the service pods using (wait until webserver pod is in running state the use below cmd):*
-   sh
    minikube service webserver-service
 
 ![Screenshot (8)](https://github.com/user-attachments/assets/87a88af0-c196-4aad-afd4-d33d25d9f8fa)
 
 
 4. **Access the web server using:**
-   sh
    [htttp://<minikube-ip>:30081](htttp://<minikube-ip>:30081)
 
    OUTPUT: nginx web page.
